@@ -3,6 +3,11 @@ import doctorsImg from "../images/doctors.png";
 import SearchForm from "../components/SearchForm";
 import Carousel from "../components/Carousel";
 import Specialities from "../components/Specialities";
+import Specialists from "../components/Specialists";
+import Caring from "../components/Caring";
+import Blog from "../components/Blog";
+import Data from "../components/Data";
+import FAQ from "../components/FAQ";
 
 const Home = () => {
   return (
@@ -28,6 +33,11 @@ const Home = () => {
       </div>
       <Carousel />
       <Specialities />
+      <Specialists />
+      <Caring />
+      <Blog />
+      <Data />
+      <FAQ />
     </div>
   );
 };

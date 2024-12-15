@@ -1,0 +1,7 @@
+.specialists .swiper-wrapper {
+  width: 90% !important;
+  left: -14rem;
+}
+.specialists .swiper-slide {
+  width: 25rem !important;
+}
