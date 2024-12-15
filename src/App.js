@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Bookings from "./pages/Bookings";
 import Hospitals from "./pages/Hospitals";
+import Footer from "./components/Footer";
 export const AppContext = createContext();
 const App = () => {
   const [hospitals, setHospitals] = useState(() => {
@@ -48,6 +49,7 @@ const App = () => {
           <Route path="/bookings" element={<Bookings />} />
           <Route path="/hospitals" element={<Hospitals />} />
         </Routes>
+        <Footer />
       </div>
     </AppContext.Provider>
   );
