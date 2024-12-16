@@ -5,16 +5,20 @@ import { FaPhoneVolume } from "react-icons/fa6";
 import { HiBadgeCheck } from "react-icons/hi";
 const Caring = () => {
   return (
-    <div className="bg-[#EFF5FF] px-8 py-12 flex gap-14 ">
-      <div className="items-end w-[50%]  relative h-[30rem]">
+    <div className="bg-[#EFF5FF] px-8 py-12 flex flex-col md:flex-row gap-14 ">
+      <div className="items-end w-full md:w-[50%]  relative h-[30rem]">
         <div className="">
-          <img src={caring1} alt="caring " className="absolute right-0" />
+          <img
+            src={caring1}
+            alt="caring "
+            className="absolute right-[30%] md:right-0"
+          />
         </div>
         <div className="">
           <img
             src={caring2}
             alt="caring"
-            className="absolute bottom-0 right-20"
+            className="absolute bottom-0 right-[40%] md:right-20"
           />
         </div>
         <div className="bg-white rounded-md px-4 py-3 w-fit absolute left-[12rem] top-[6rem]">
@@ -27,7 +31,7 @@ const Caring = () => {
           <p className="text-gray-400">Consultation with the best</p>
         </div>
       </div>
-      <div className="w-[50%] flex flex-col gap-7 self-center">
+      <div className="w-full md:w-[50%] flex flex-col gap-7 self-center">
         <p className="text-blue-400 font-semibold">
           HELPING PATIENTS FROM AROUND THE GLOBE!!
         </p>

@@ -3,25 +3,11 @@ import hospitalImg from "../images/hospital.png";
 import { BiSolidLike } from "react-icons/bi";
 import BookingInterface from "./BookingInterface";
 import { AppContext } from "../App";
+import { getTime, getDate } from "../utils";
 const HospitalCard = ({ hospital, hospitalIndex, type, date }) => {
   const { state, city } = useContext(AppContext);
   const [showBookInterfaceIndex, setShowBookInterfaceIndex] = useState();
-  const getTime = (date) => {
-    const time = new Date(date).toLocaleTimeString("en-in", {
-      hour: "2-digit",
-      minute: "2-digit",
-    });
-    return time;
-  };
 
-  const getDate = (date) => {
-    const date1 = new Date(date).toLocaleDateString("en-in", {
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-    });
-    return date1;
-  };
   return (
     <div key={hospital["Provider ID"]} className="p-6  bg-white rounded-xl">
       <div className="flex gap-4">
@@ -68,11 +54,8 @@ const HospitalCard = ({ hospital, hospitalIndex, type, date }) => {
           </div>
         )}
       </div>
-      {type === "book" && (
-        <BookingInterface
-          show={hospitalIndex === showBookInterfaceIndex}
-          hospitalIndex={hospitalIndex}
-        />
+      {type === "book" && hospitalIndex === showBookInterfaceIndex && (
+        <BookingInterface hospitalIndex={hospitalIndex} hospital={hospital} />
       )}
     </div>
   );

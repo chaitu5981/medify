@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { AppContext } from "../App";
 import { enqueueSnackbar } from "notistack";
 import { preReleaseLabel } from "@mui/material";
+import { calc } from "antd/es/theme/internal";
 
 const SlotsDisplay = ({ slots, dayIndex, hospitalIndex, setSlotsDayWise }) => {
   const { appointments, setAppointments, hospitals } = useContext(AppContext);
@@ -51,39 +52,45 @@ const SlotsDisplay = ({ slots, dayIndex, hospitalIndex, setSlotsDayWise }) => {
     <div className="mt-10 flex flex-col gap-6 text-sm">
       <div className="flex gap-8">
         <p className="w-[6rem] text-left">Morning</p>
-        {morningSlots.map((slot) => (
-          <div
-            key={slot}
-            className="border-2 border-[#79C8FF] px-1 py-1 w-[6rem] cursor-pointer"
-            onClick={() => addAppointment(slot[1])}
-          >
-            {slot[0]}
-          </div>
-        ))}
+        <div className="flex flex-wrap  gap-8 w-[80%]">
+          {morningSlots.map((slot) => (
+            <div
+              key={slot}
+              className="border-2 border-[#79C8FF] px-1 py-1 w-[6rem] cursor-pointer"
+              onClick={() => addAppointment(slot[1])}
+            >
+              {slot[0]}
+            </div>
+          ))}
+        </div>
       </div>
       <div className="flex gap-8">
         <p className="w-[6rem] text-left">Afternoon</p>
-        {afternoonSlots.map((slot) => (
-          <div
-            key={slot}
-            className="border-2 border-[#79C8FF] py-1 w-[6rem] cursor-pointer"
-            onClick={() => addAppointment(slot[1])}
-          >
-            {slot[0]}
-          </div>
-        ))}
+        <div className="flex flex-wrap w-[45rem] gap-8">
+          {afternoonSlots.map((slot) => (
+            <div
+              key={slot}
+              className="border-2 border-[#79C8FF] py-1 w-[6rem] cursor-pointer"
+              onClick={() => addAppointment(slot[1])}
+            >
+              {slot[0]}
+            </div>
+          ))}
+        </div>
       </div>
       <div className="flex gap-8">
         <p className="w-[6rem] text-left">Evening</p>
-        {eveningSlots.map((slot) => (
-          <div
-            key={slot}
-            className="border-2 border-[#79C8FF] px-2 py-1 w-[6rem] cursor-pointer"
-            onClick={() => addAppointment(slot[1])}
-          >
-            {slot[0]}
-          </div>
-        ))}
+        <div className="flex flex-wrap w-[45rem] gap-8">
+          {eveningSlots.map((slot) => (
+            <div
+              key={slot}
+              className="border-2 border-[#79C8FF] px-2 py-1 w-[6rem] cursor-pointer"
+              onClick={() => addAppointment(slot[1])}
+            >
+              {slot[0]}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

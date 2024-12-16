@@ -5,3 +5,21 @@
 .specialists .swiper-slide {
   width: 25rem !important;
 }
+
+.specialists .swiper-pagination {
+  position: static;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+
+.specialists .swiper-slide p {
+  text-align: center;
+}
+.specialists .swiper-slide p:nth-child(2) {
+  font-size: x-large;
+}
+
+.specialists .swiper-slide p:last-child {
+  color: #2aa7ff;
+}

@@ -51,22 +51,21 @@ const SearchForm = () => {
 
   const handleCitySearch = (value) => {
     setOptions2(() => {
-      if (!value) return [];
-      return cities
-        .filter((c) => c.toLowerCase().includes(value.toLowerCase()))
-        .map((c) => ({
-          label: c,
-          value: c,
-        }));
+      let c1;
+      if (!value) c1 = [...cities];
+      c1 = cities.filter((c) => c.toLowerCase().includes(value.toLowerCase()));
+      return c1.map((c) => ({
+        label: c,
+        value: c,
+      }));
     });
   };
 
   const handleStateSearch = (value) => {
     setOptions1(() => {
-      if (!value) return [];
-      const s1 = states.filter((s) =>
-        s.toLowerCase().includes(value.toLowerCase())
-      );
+      let s1;
+      if (!value) s1 = [...states];
+      s1 = states.filter((s) => s.toLowerCase().includes(value.toLowerCase()));
       return s1.map((s) => ({
         label: s,
         value: s,
@@ -84,21 +83,20 @@ const SearchForm = () => {
     navigate("/hospitals");
   };
   return (
-    <div>
+    <div className="static lg:absolute  mx-auto lg:-bottom-[10rem] lg:left-[12.5%] w-[75%]">
       <form
         onSubmit={handleSubmit}
-        className="w-[75%] p-6 bg-white h-[21rem] absolute flex flex-col justify-between items-center -bottom-24 left-[12.5%] shadow-md rounded-xl"
+        className="p-8 bg-white gap-10  flex flex-col justify-between items-center   shadow-md rounded-xl"
       >
-        <div className="flex gap-2 justify-between w-[95%] flex-1 items-start">
-          <div className="flex justify-around flex-1 items-center">
-            <div className="relative">
-              <IoIosSearch className="absolute left-2 top-3" />
+        <div className="flex flex-col lg:flex-row gap-4 justify-between w-full flex-1 items-start">
+          <div className="flex flex-col md:flex-row gap-4  justify-around   w-full lg:w-[80%] items-center">
+            <div className="relative bg-[#fafbfe]">
+              <IoIosSearch className="absolute left-2 top-4" />
               <AutoComplete
-                className="w-[14rem] h-[2.5rem] pl-5 bg-[#FAFABFE] border-2 border-gray-100 rounded"
+                className="w-[16rem] h-[3rem] pl-5 bg-transparent border-2 rounded-md border-gray-100 rounded"
                 variant="borderless"
                 onSelect={(value) => {
                   setState(value);
-                  // setSelCity("");
                 }}
                 options={options1}
                 placeholder="state"
@@ -106,9 +104,9 @@ const SearchForm = () => {
               />
             </div>
             <div className="relative">
-              <IoIosSearch className="absolute left-2 top-3" />
+              <IoIosSearch className="absolute left-2 top-4" />
               <AutoComplete
-                className="w-[14rem] pl-5 h-[2.5rem] bg-[#FAFABFE] border-2 border-gray-100"
+                className="w-[16rem] pl-5 h-[3rem] bg-transparent border-2 rounded-md border-gray-100"
                 variant="borderless"
                 options={options2}
                 onSelect={(value) => setCity(value)}
@@ -117,30 +115,41 @@ const SearchForm = () => {
               />
             </div>
           </div>
-          <button
-            type="submit"
-            className="bg-[#2AA7FF] py-2 px-3 text-white w-fit h-fit rounded flex gap-1 items-center"
-          >
-            <IoIosSearch />
-            Search
-          </button>
+          <div className="w-full lg:w-[20%]">
+            <button
+              type="submit"
+              className="bg-[#2AA7FF] py-3 px-4 mx-auto  text-white w-fit h-fit rounded-md flex gap-1 items-center"
+            >
+              <IoIosSearch />
+              Search
+            </button>
+          </div>
         </div>
-        <p className="font-bold">You may be looking for</p>
-        <div className="flex  mt-4 justify-between w-full">
-          <div className="bg-[#FAFBFE] w-[9rem] h-[7rem] flex justify-center items-center">
-            <img src={doctorIcon} alt="" />
-          </div>
-          <div className="bg-[#FAFBFE] w-[9rem] h-[7rem] flex justify-center items-center">
-            <img src={labsIcon} alt="" srcset="" />
-          </div>
-          <div className="bg-[#EEF8FF] w-[9rem] h-[7rem] rounded border-2 border-b-col flex justify-center items-center">
-            <img src={hospitalsIcon} alt="" />
-          </div>
-          <div className="bg-[#FAFBFE] w-[9rem] h-[7rem] flex justify-center items-center">
-            <img src={medicineIcon} alt="" />
-          </div>
-          <div className="bg-[#FAFBFE] w-[9rem] h-[7rem] flex justify-center items-center">
-            <img src={ambulanceIcon} alt="" />
+        <div className="flex flex-col gap-2">
+          <p className="font-semibold text-xl text-center text-[#102851] ">
+            You may be looking for
+          </p>
+          <div className="flex flex-wrap mt-4 justify-center gap-4 w-full">
+            <div className="bg-[#FAFBFE] w-[12.5rem] flex-col gap-3 h-[10rem] flex justify-center items-center">
+              <img src={doctorIcon} alt="" />
+              <p className="text-gray-400">Doctors</p>
+            </div>
+            <div className="bg-[#FAFBFE] w-[12.5rem] flex-col gap-3 h-[10rem] flex justify-center items-center">
+              <img src={labsIcon} alt="" />
+              <p className="text-gray-400">Labs</p>
+            </div>
+            <div className="bg-[#EEF8FF] w-[12.5rem] flex-col gap-3 h-[10rem] rounded border-2 border-b-col flex justify-center items-center">
+              <img src={hospitalsIcon} alt="" />
+              <p>Hospitals</p>
+            </div>
+            <div className="bg-[#FAFBFE] w-[12.5rem] flex-col gap-3 h-[10rem] flex justify-center items-center">
+              <img src={medicineIcon} alt="" />
+              <p className="text-gray-400">Medical Store</p>
+            </div>
+            <div className="bg-[#FAFBFE] w-[12.5rem] flex-col gap-3 h-[10rem] flex justify-center items-center">
+              <img src={ambulanceIcon} alt="" />
+              <p className="text-gray-400">Ambulance</p>
+            </div>
           </div>
         </div>
       </form>

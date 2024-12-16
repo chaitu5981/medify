@@ -12,7 +12,7 @@ const Card = ({ image, name }) => {
   return (
     <div className="bg-white py-8 flex flex-col gap-3 rounded-xl items-center">
       <img src={image} alt="image1" className="w-[4rem] h-[4rem]" />
-      <p className="text-xl text-gray-400">{name}</p>
+      <p className="text-xl text-gray-400 text-center">{name}</p>
     </div>
   );
 };
@@ -23,31 +23,31 @@ const Specialities = () => {
         Find By Specialisation
       </h1>
       <div className="w-[75%] mx-auto">
-        <Row gutter={24} className="mb-8">
-          <Col span={6}>
+        <Row gutter={[16, 16]} className="mb-8">
+          <Col lg={6} sm={12} xs={24}>
             <Card image={labs} name="Dentistry" />
           </Col>
-          <Col span={6}>
+          <Col lg={6} sm={12} xs={24}>
             <Card image={steth} name="Primary Care" />
           </Col>
-          <Col span={6}>
+          <Col lg={6} sm={12} xs={24}>
             <Card image={heart} name="Cardiology" />
           </Col>
-          <Col span={6}>
+          <Col lg={6} sm={12} xs={24}>
             <Card image={ecg} name="MRI Resonance" />
           </Col>
         </Row>
-        <Row gutter={16}>
-          <Col span={6}>
+        <Row gutter={[16, 16]}>
+          <Col lg={6} sm={12} xs={24}>
             <Card image={bloodTest} name="Blood Test" />
           </Col>
-          <Col span={6}>
+          <Col lg={6} sm={12} xs={24}>
             <Card image={q} name="Piscologist" />
           </Col>
-          <Col span={6}>
+          <Col lg={6} sm={12} xs={24}>
             <Card image={labs} name="Laboratory" />
           </Col>
-          <Col span={6}>
+          <Col lg={6} sm={12} xs={24}>
             <Card image={xray} name="X-Ray" />
           </Col>
         </Row>

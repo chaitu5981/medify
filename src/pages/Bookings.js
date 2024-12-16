@@ -1,6 +1,9 @@
 import React, { useContext } from "react";
 import { AppContext } from "../App";
 import HospitalCard from "../components/HospitalCard";
+import oral from "../images/oral.png";
+import FAQ from "../components/FAQ";
+import Mobile from "../components/Mobile";
 
 const Bookings = () => {
   const { appointments } = useContext(AppContext);
@@ -18,8 +21,12 @@ const Bookings = () => {
             ></HospitalCard>
           ))}
         </div>
-        <div className="w-[28%] bg-white rounded-xl h-[10rem]"></div>
+        <div className="w-[28%] bg-white rounded-xl h-[10rem]">
+          <img src={oral} alt="oral" className="w-full" />
+        </div>
       </div>
+      <FAQ />
+      <Mobile />
     </div>
   );
 };

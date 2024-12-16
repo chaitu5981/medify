@@ -8,13 +8,14 @@ import Caring from "../components/Caring";
 import Blog from "../components/Blog";
 import Data from "../components/Data";
 import FAQ from "../components/FAQ";
+import Mobile from "../components/Mobile";
 
 const Home = () => {
   return (
     <div className="min-h-full">
-      <div className="h-[35rem] bg-[#EAF2FF] relative">
-        <div className="w-[75%] mx-auto flex py-8 justify-between">
-          <div className="w-[25rem] flex flex-col gap-3">
+      <div className="lg:h-[35rem] bg-[#EAF2FF] lg:relative">
+        <div className="w-[75%] mx-auto flex flex-col lg:flex-row py-8 justify-between">
+          <div className=" w-full lg:w-[50%] flex flex-col gap-3">
             <p className="text-2xl">Skip the travel! Find Online</p>
             <p className="text-5xl font-bold">Medical Centers</p>
             <p>
@@ -25,7 +26,7 @@ const Home = () => {
               Find Centers
             </button>
           </div>
-          <div className="h-[25rem]">
+          <div className=" w-full h-[25rem] lg:w-[50%]">
             <img src={doctorsImg} alt="doctors" className="h-full" />
           </div>
         </div>
@@ -38,6 +39,7 @@ const Home = () => {
       <Blog />
       <Data />
       <FAQ />
+      <Mobile />
     </div>
   );
 };

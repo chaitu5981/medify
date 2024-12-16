@@ -8,7 +8,7 @@ import "./Specialists.css";
 const Specialists = () => {
   return (
     <div className="py-6 specialists">
-      <h1 className="text-2xl text-center my-6 font-semibold">
+      <h1 className="text-5xl text-center my-10 font-semibold text-[#1b3c74]">
         Our Medical Specialist
       </h1>
       <Swiper
@@ -23,28 +23,44 @@ const Specialists = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src={doctor1} alt="" />
+          <img src={doctor1} alt="doctor" />
+          <p>Dr. Ahmad Khan</p>
+          <p>Neurologist</p>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={doctor2} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={doctor3} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={doctor1} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={doctor2} alt="" />
+          <img src={doctor2} alt="doctor" />
+          <p>Dr. Heena Sachdeva</p>
+          <p>Orthopaedics</p>
         </SwiperSlide>
         <SwiperSlide>
           <img src={doctor3} alt="" />
+          <p>Dr. Ankur Sharma</p>
+          <p>Medicine</p>
         </SwiperSlide>
         <SwiperSlide>
           <img src={doctor1} alt="" />
+          <p>Dr. Ahmad Khan</p>
+          <p>Neurologist</p>
         </SwiperSlide>
         <SwiperSlide>
           <img src={doctor2} alt="" />
+          <p>Dr. Heena Sachdeva</p>
+          <p>Orthopaedics</p>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={doctor3} alt="" />
+          <p>Dr. Ankur Sharma</p>
+          <p>Medicine</p>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={doctor1} alt="" />
+          <p>Dr. Ahmad Khan</p>
+          <p>Neurologist</p>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={doctor2} alt="" />
+          <p>Dr. Heena Sachdeva</p>
+          <p>Orthopaedics</p>
         </SwiperSlide>
       </Swiper>
     </div>

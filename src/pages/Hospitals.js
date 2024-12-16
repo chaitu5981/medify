@@ -1,9 +1,11 @@
 import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { FaRegCheckCircle } from "react-icons/fa";
-
+import oral from "../images/oral.png";
 import { AppContext } from "../App";
 import HospitalCard from "../components/HospitalCard";
+import FAQ from "../components/FAQ";
+import Mobile from "../components/Mobile";
 const Hospitals = () => {
   const { state, city, hospitals, setHospitals } = useContext(AppContext);
   const [loading, setLoading] = useState(false);
@@ -53,9 +55,13 @@ const Hospitals = () => {
                 />
               ))}
             </div>
-            <div className="w-[28%] bg-white rounded-xl h-[10rem]"></div>
+            <div className="w-[28%] bg-white rounded-xl h-[10rem]">
+              <img src={oral} alt="oral" className="w-full" />
+            </div>
           </div>
         </div>
+        <FAQ />
+        <Mobile />
       </div>
     );
 };

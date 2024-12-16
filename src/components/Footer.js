@@ -33,9 +33,9 @@ const Footer = () => {
           <div className="w-[30%] self-stretch flex flex-col justify-between">
             <img src={logo} alt="" className="w-[8rem]" />
             <div className="flex gap-4">
-              {socialLinks.map((link) => (
+              {socialLinks.map((link, i) => (
                 <div
-                  key={link}
+                  key={i}
                   className="bg-white w-fit p-2 rounded-full text-blue-400"
                 >
                   {link}
@@ -45,8 +45,8 @@ const Footer = () => {
           </div>
           <div className="w-[70%]">
             <div className="grid grid-cols-3 text-white gap-y-8">
-              {links.map((link) => (
-                <div key={link}>{`>   ${link}`}</div>
+              {links.map((link, i) => (
+                <div key={i}>{`>   ${link}`}</div>
               ))}
             </div>
           </div>

@@ -10,8 +10,8 @@ const Blog = () => {
       <p className="text-center text-[#1b3c74] text-5xl font-semibold">
         Read Our Latest News
       </p>
-      <div className="flex gap-6 ">
-        <div className="flex flex-col w-[33%]">
+      <div className="flex gap-6 flex-wrap justify-center">
+        <div className="flex flex-col w-[20rem]">
           <img src={detox} alt="detox" className="w-full h-full" />
           <div className="p-2 border-2 border-gray-100 flex flex-col gap-4">
             <p className="text-[#7b86a0]">
@@ -27,7 +27,7 @@ const Blog = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col w-[33%]">
+        <div className="flex flex-col w-[20rem] ">
           <img src={detox} alt="detox" className="w-full h-full" />
           <div className="p-2 border-2 border-gray-100 flex flex-col gap-4">
             <p className="text-[#7b86a0]">
@@ -41,7 +41,7 @@ const Blog = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col w-[33%]">
+        <div className="flex flex-col w-[20rem]">
           <img src={detox} alt="detox" className="w-full h-full" />
           <div className="p-2 border-2 border-gray-100 flex flex-col gap-4">
             <p className="text-[#7b86a0]">
