@@ -5,9 +5,9 @@ import { FaGooglePlay } from "react-icons/fa";
 import { FaApple } from "react-icons/fa6";
 const Mobile = () => {
   return (
-    <div className="bg-[#eef4ff] pt-10 h-[34rem] overflow-hidden">
-      <div className="w-[75%] mx-auto flex ">
-        <div className="w-[50%] relative">
+    <div className="bg-[#eef4ff] pt-10 h-fit xl:h-[34rem] ">
+      <div className="w-[75%] mx-auto flex flex-col xl:flex-row ">
+        <div className="w-full xl:w-[50%] relative h-[31rem] overflow-y-hidden">
           <img src={mobile2} alt="mobile" className="absolute left-[12rem]" />
           <img
             src={mobile1}
@@ -25,7 +25,7 @@ const Mobile = () => {
             className="absolute left-[0.5rem] top-[7rem]"
           />
         </div>
-        <div className="w-[50%]  flex flex-col justify-center h-[28rem] gap-5">
+        <div className="w-full xl:w-[50%]  flex flex-col justify-center h-[28rem] gap-5">
           <p className="text-[#1b3c74] text-5xl font-semibold w-[23rem] leading-[4rem]">
             Download the <span className="text-[#2aa7ff]">Medify</span> App
           </p>

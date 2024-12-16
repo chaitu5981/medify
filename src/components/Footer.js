@@ -29,7 +29,7 @@ const Footer = () => {
   return (
     <div className="bg-[#1b3c74]">
       <div className="w-[75%] mx-auto pt-12 pb-6 flex flex-col gap-6">
-        <div className="flex gap-8">
+        <div className="flex  flex-col md:flex-row gap-8">
           <div className="w-[30%] self-stretch flex flex-col justify-between">
             <img src={logo} alt="" className="w-[8rem]" />
             <div className="flex gap-4">
@@ -44,7 +44,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="w-[70%]">
-            <div className="grid grid-cols-3 text-white gap-y-8">
+            <div className="grid  grid-cols-2 lg:grid-cols-3 text-white gap-y-8">
               {links.map((link, i) => (
                 <div key={i}>{`>   ${link}`}</div>
               ))}

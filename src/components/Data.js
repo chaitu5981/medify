@@ -6,7 +6,7 @@ import labs from "../images/labs1.png";
 const Data = () => {
   return (
     <div className="bg-[#eef4ff] py-12 ">
-      <div className="w-[75%] mx-auto flex gap-12">
+      <div className="w-[75%] mx-auto flex flex-col lg:flex-row gap-12">
         <div className="w-[50%] flex flex-col gap-6 self-center">
           <p className="text-[#2aa7ff] font-semibold">
             CARING FOR THE HEALTH OF YOU AND YOUR FAMILY.

@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../images/logo.png";
 import { Menu } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import SmallForm from "./SmallForm";
 const items = [
   {
     label: <MenuOutlined />,
@@ -40,6 +41,19 @@ const items = [
   },
 ];
 const Navbar = () => {
+  const [showSmallForm, setShowSmallForm] = useState(false);
+  const [type, setType] = useState();
+  const navigate = useNavigate();
+  const handleMyBookings = () => {
+    setShowSmallForm(true);
+    setType("bookings");
+    navigate("/bookings");
+  };
+
+  const handleHome = () => {
+    setShowSmallForm(false);
+    navigate("/");
+  };
   return (
     <div className="bg-[#EAF2FF]">
       <div className="bg-[#2AA7FF] h-fit text-center text-white">
@@ -49,9 +63,9 @@ const Navbar = () => {
         cleanliness.
       </div>
       <div className="flex  w-[75%] m-auto justify-between items-center py-2">
-        <Link to="/">
+        <div onClick={handleHome}>
           <img src={logo} alt="logo" className="h-[2rem]" />
-        </Link>
+        </div>
         <div className="gap-6 hidden xl:flex">
           <button className="h-fit py-1">Find Doctors</button>
           <button className="h-fit py-1">Hospitals</button>
@@ -59,15 +73,16 @@ const Navbar = () => {
           <button className="h-fit py-1">Surgeries</button>
           <button className="h-fit py-1">Software for Provider</button>
           <button className="h-fit py-1">Facilities</button>
-          <Link
-            to="/bookings"
+          <button
+            onClick={handleMyBookings}
             className="bg-[#2AA7FF] py-1 px-2 text-white w-fit h-fit rounded"
           >
             My Bookings
-          </Link>
+          </button>
         </div>
         <Menu items={items} className="xl:hidden" />
       </div>
+      {showSmallForm && <SmallForm type={type} />}
     </div>
   );
 };
