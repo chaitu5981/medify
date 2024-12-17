@@ -22,11 +22,13 @@ const HospitalCard = ({ hospital, hospitalIndex, type, date }) => {
             {city},{state}
           </p>
           <p>{hospital["Hospital Type"]}</p>
-          <p className="flex gap-2 mt-2">
-            <span className="text-[#05A14B] font-bold">FREE</span>
-            <span className="line-through">$50</span>
-            <span>Consultation fee at clinic</span>
-          </p>
+          {type === "book" && (
+            <p className="flex gap-2 mt-2">
+              <span className="text-[#05A14B] font-bold">FREE</span>
+              <span className="line-through">$50</span>
+              <span>Consultation fee at clinic</span>
+            </p>
+          )}
           <p className="text-gray-200 ">-------</p>
           <button className="px-2 py-1 rounded w-[4rem] flex items-center gap-1 bg-[#00AF00] text-white">
             <BiSolidLike className="text-2xl" />

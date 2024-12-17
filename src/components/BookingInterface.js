@@ -68,6 +68,7 @@ const BookingInterface = ({ hospitalIndex, hospital }) => {
         slidesPerView={3}
         navigation={true}
         modules={[Navigation]}
+        direction="vertical"
         className="mySwiper"
         onNavigationNext={handleNavNext}
         onNavigationPrev={handleNavPrev}
