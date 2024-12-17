@@ -71,7 +71,6 @@ const BookingInterface = ({ hospitalIndex, hospital }) => {
         className="mySwiper"
         onNavigationNext={handleNavNext}
         onNavigationPrev={handleNavPrev}
-        // spaceBetween={40}
       >
         {slotsDayWise.map((slot, index) => (
           <SwiperSlide key={index}>

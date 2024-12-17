@@ -56,7 +56,7 @@ const Hospitals = () => {
               ))}
             </div>
             <div className="w-[28%] bg-white rounded-xl h-[10rem]">
-              <img src={oral} alt="oral" className="w-full" />
+              <img src={oral} alt="oral" className="w-full object-contain" />
             </div>
           </div>
         </div>
