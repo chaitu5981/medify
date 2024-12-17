@@ -52,7 +52,7 @@ const SlotsDisplay = ({ slots, dayIndex, hospitalIndex, setSlotsDayWise }) => {
     <div className="mt-10 flex flex-col gap-6 text-sm">
       <div className="flex gap-8">
         <p className="w-[6rem] text-left">Morning</p>
-        <div className="flex flex-wrap  gap-8 w-[80%]">
+        <div className="flex flex-wrap  gap-8 w-[38vw]">
           {morningSlots.map((slot) => (
             <div
               key={slot}
@@ -66,7 +66,7 @@ const SlotsDisplay = ({ slots, dayIndex, hospitalIndex, setSlotsDayWise }) => {
       </div>
       <div className="flex gap-8">
         <p className="w-[6rem] text-left">Afternoon</p>
-        <div className="flex flex-wrap w-[45rem] gap-8">
+        <div className="flex flex-wrap w-[38vw] gap-8">
           {afternoonSlots.map((slot) => (
             <div
               key={slot}
@@ -80,7 +80,7 @@ const SlotsDisplay = ({ slots, dayIndex, hospitalIndex, setSlotsDayWise }) => {
       </div>
       <div className="flex gap-8">
         <p className="w-[6rem] text-left">Evening</p>
-        <div className="flex flex-wrap w-[45rem] gap-8">
+        <div className="flex flex-wrap w-[38vw] gap-8">
           {eveningSlots.map((slot) => (
             <div
               key={slot}

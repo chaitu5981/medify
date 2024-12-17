@@ -10,7 +10,7 @@ const HospitalCard = ({ hospital, hospitalIndex, type, date }) => {
 
   return (
     <div key={hospital["Provider ID"]} className="p-6  bg-white rounded-xl">
-      <div className="flex gap-4">
+      <div className="flex flex-col xl:flex-row gap-4">
         <div className="bg-[#8BCFFF] p-5 rounded-full w-[7rem] h-[7rem]">
           <img src={hospitalImg} alt="" />
         </div>

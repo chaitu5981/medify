@@ -86,7 +86,7 @@ const BookingInterface = ({ hospitalIndex, hospital }) => {
                 {slotsDayWise[index].length + " Slots Available"}
               </p>
               {slotDayIndex === index ? (
-                <div className="bg-[#36ABFE] w-[10rem] h-[4px] mx-auto rounded"></div>
+                <div className="bg-[#36ABFE] w-[60%] h-[4px] mx-auto rounded"></div>
               ) : null}
             </div>
             {slotDayIndex === index && (
