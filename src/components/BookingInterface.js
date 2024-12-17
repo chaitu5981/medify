@@ -90,8 +90,8 @@ const BookingInterface = ({ hospitalIndex, hospital }) => {
             </div>
             {slotDayIndex === index && (
               <div
-                className="flex"
-                style={{ marginLeft: `-${(index - viewIndex) * 16}rem` }}
+                className="flex slot-view"
+                style={{ marginLeft: `-${(index - viewIndex) * 15}vw` }}
               >
                 <SlotsDisplay
                   slots={slotsDayWise[index]}

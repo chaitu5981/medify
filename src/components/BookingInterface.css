@@ -22,3 +22,9 @@
   width: 3rem;
   right: 0;
 }
+
+@media (max-width: 7968px) {
+  .booking-carousel .swiper .slot-view {
+    margin-left: ;
+  }
+}
